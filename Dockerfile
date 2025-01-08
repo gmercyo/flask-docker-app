@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.8-alpine
+FROM python:3.9-alpine
 # Set the working directory inside the container
 WORKDIR /app
 
@@ -7,7 +7,8 @@ WORKDIR /app
 COPY . /app
 
 # Install Flask
+
 RUN pip install -r requirements.txt
 
 # Command to run the application
-CMD python /app/main.py
+CMD ["python", "/app/app.py"]
